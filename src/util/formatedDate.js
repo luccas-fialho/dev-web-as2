@@ -6,3 +6,5 @@ function formatDate(date) {
   const options = { year: "numeric", month: "long", day: "numeric" };
   return localDate.toLocaleDateString("pt-BR", options);
 }
+
+export default formatDate;
