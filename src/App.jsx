@@ -5,6 +5,7 @@ function App() {
   return (
     <main className="App">
       <AppRoutes />
+      <footer>Made by Luccas Fialho</footer>
     </main>
   );
 }

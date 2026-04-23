@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Home.css";
 import firebase from "../../Firebase.js";
+import formatDate from "../../util/formatedDate.js";
 
 export class Home extends Component {
   constructor(props) {
@@ -51,15 +52,22 @@ export class Home extends Component {
     const { name, lastName, birthday, loading } = this.state;
 
     if (loading) {
-      return <p>Carregando...</p>;
+      return <p>Loading personal data...</p>;
     }
 
     return (
-      <div>
+      <div className="home-container">
         <h1>Personal Info from db</h1>
-        <p>Name: {name}</p>
-        <p>Last Name: {lastName}</p>
-        <p>Birthday: {birthday}</p>
+        <p>
+          <span>Name: </span>
+          {name}
+        </p>
+        <p>
+          <span>Last Name: </span> {lastName}
+        </p>
+        <p>
+          <span>Birthday: </span> {formatDate(birthday)}
+        </p>
       </div>
     );
   }

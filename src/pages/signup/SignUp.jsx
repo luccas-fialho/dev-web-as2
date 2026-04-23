@@ -17,7 +17,7 @@ export class SignUp extends Component {
       error: "",
       success: "",
     };
-    this.handleLogin = this.handleLogin.bind(this);
+    this.handleSignUp = this.handleSignUp.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -25,7 +25,7 @@ export class SignUp extends Component {
     this.setState({ [event.target.name]: event.target.value });
   }
 
-  async handleLogin() {
+  async handleSignUp() {
     const { email, password, name, lastName, birthday } = this.state;
 
     this.setState({
@@ -34,9 +34,8 @@ export class SignUp extends Component {
       success: "",
     });
 
-    if (!email || !password) {
-      this.setState({ loading: false });
-      error: "Must have email and password";
+    if (!email || !password || !name || !lastName || !birthday) {
+      this.setState({ loading: false, error: "Fill all the fields!" });
       return;
     }
 
@@ -67,6 +66,7 @@ export class SignUp extends Component {
 
       setTimeout(() => {
         this.setState({ success: "" });
+        window.location.href = "/login";
       }, 3000);
     } catch (error) {
       let message = "Error creating user";
@@ -126,9 +126,13 @@ export class SignUp extends Component {
             onChange={this.handleChange}
           />
 
-          <Button color="primary" onClick={this.handleLogin}>
-            {this.state.loading ? "Loading..." : "Send"}
+          <Button color="primary" onClick={this.handleSignUp}>
+            {this.state.loading ? "Loading..." : "Sign Up"}
           </Button>
+
+          <p>
+            Already have a login? <a href="/login">Click here.</a>{" "}
+          </p>
 
           {this.state.error && (
             <p style={{ color: "red" }}>{this.state.error}</p>

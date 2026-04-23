@@ -5,4 +5,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #555;
 }

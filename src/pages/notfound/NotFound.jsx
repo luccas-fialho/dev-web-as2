@@ -3,7 +3,11 @@ import "./NotFound.css";
 
 export class NotFound extends Component {
   render() {
-    return <div>NotFound</div>;
+    return (
+      <div>
+        <h1>Essa página não existe… ou será que nunca existiu?... 🤔💭</h1>
+      </div>
+    );
   }
 }
 

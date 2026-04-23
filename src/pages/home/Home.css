@@ -1,0 +1,11 @@
+.home-container p {
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.home-container p span {
+  font-weight: bold;
+}
