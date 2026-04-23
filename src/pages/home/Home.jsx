@@ -18,7 +18,7 @@ export class Home extends Component {
   async componentDidMount() {
     this.unsubscribe = firebase.auth().onAuthStateChanged(async (user) => {
       if (!user) {
-        console.log("Usuário não logado");
+        console.log("User not logged in");
 
         this.setState({ loading: false });
         return;
@@ -37,7 +37,7 @@ export class Home extends Component {
             loading: false,
           });
         } else {
-          console.log("Documento não encontrado");
+          console.log("Document not found");
 
           this.setState({ loading: false });
         }
