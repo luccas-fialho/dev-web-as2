@@ -1,7 +1,8 @@
 function formatDate(date) {
-  // transform the received date into pt-BR format
-  const options = { year: "numeric", month: "long", day: "numeric" };
-  return new Date(date).toLocaleDateString("pt-BR", options);
-}
+  const [year, month, day] = date.split("-");
 
-export default formatDate;
+  const localDate = new Date(year, month - 1, day);
+
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  return localDate.toLocaleDateString("pt-BR", options);
+}
