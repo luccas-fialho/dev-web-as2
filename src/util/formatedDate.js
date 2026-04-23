@@ -4,7 +4,7 @@ function formatDate(date) {
   const localDate = new Date(year, month - 1, day);
 
   const options = { year: "numeric", month: "long", day: "numeric" };
-  return localDate.toLocaleDateString("pt-BR", options);
+  return localDate.toLocaleDateString("en-US", options);
 }
 
 export default formatDate;
