@@ -1,16 +1,39 @@
-# React + Vite
+# Atividade Somativa 2 - Tecnologias Para Desenvolvimento Web (11100010566_20261_01)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Trabalho desenvolvido para a disciplina de Desenvolvimento Web da PUCPR para o primeiro semestre de 2026.
 
-Currently, two official plugins are available:
+O site está hospedado em: [Site](https://dev-web-as2.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Passos para execução do projeto
 
-## React Compiler
+```bash
+# clone o repo
+git clone https://github.com/luccas-fialho/dev-web-as2.git
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# acesse a pasta do projeto
+cd dev-web-as2
 
-## Expanding the ESLint configuration
+# instale as dependências
+npm i
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# copie o arquivo de variáveis de ambiente
+cp .env.example .env
+
+# insira as variaveis de ambiente do seu projeto no firebase
+
+# inicie o projeto
+npm run dev
+```
+
+## Tecnologias usadas
+
+- React com vite
+- Firebase
+- React Router Dom
+- Netlify
+
+## Autor
+
+Luccas Fialho dos Santos
+
+- [LinkedIn](https://linkedin.com/in/luccas-fialho)
